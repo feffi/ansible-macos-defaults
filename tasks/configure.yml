@@ -1,0 +1,11 @@
+---
+- name: Setup OSX defaults
+  become: true
+  osx_defaults:
+    domain: "{{ item.domain }}"
+    key: "{{ item.key }}"
+    type: "{{ item.type }}"
+    value: "{{ item.value }}"
+    state: present
+  when: "{{ item.enable | default(true) }}"
+  with_items: "{{ osx_defaults.defaults }}"
