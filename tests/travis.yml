@@ -2,7 +2,8 @@
 - hosts: 127.0.0.1
   connection: local
   vars:
-    - osx_defaults: {
+    DEBUG = true
+    osx_defaults: {
       defaults: [
         { domain: "com.apple.ActivityMonitor", key: "IconType", type: "integer", value: "5" },
         { domain: "com.apple.ActivityMonitor", key: "OpenMainWindow", type: "boolean", value: "true" },
