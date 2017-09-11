@@ -7,5 +7,5 @@
     type: "{{ item.type }}"
     value: "{{ item.value }}"
     state: present
-  when: "{{ item.enable | default(true) }}"
+  when: item.enable | default(true)
   with_items: "{{ osx_defaults.defaults }}"
