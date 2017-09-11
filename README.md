@@ -41,4 +41,4 @@ macos_defaults: {
     - hosts: all
       roles:
         - { role: feffi.macos-defaults }
-``
+```
