@@ -1,8 +1,8 @@
-# ansible-osx-defaults
+# ansible-macos-defaults
 
 Ansible role to set macOS "defaults" settings.
 
-[![Build Status](https://travis-ci.org/feffi/ansible-osx-defaults.svg?branch=master)](https://travis-ci.org/feffi/ansible-osx-defaults)
+[![Build Status](https://travis-ci.org/feffi/ansible-macos-defaults.svg?branch=master)](https://travis-ci.org/feffi/ansible-macos-defaults)
 
 ## Requirements
 
@@ -17,16 +17,15 @@ hash_behaviour = merge
 ## Install
 Just add the role to your ``requirements.yml`` file:
 ```
-- src: https://github.com/feffi/ansible-osx-defaults.git
-  name: feffi.osx-defaults
+- src: https://github.com/feffi/ansible-macos-defaults.git
+  name: feffi.macos-defaults
 ```
 
 
 ## Role Variables
 
 ```yaml
-# Setup OSX defaults. Also see: https://github.com/osxstrap/osxstrap-config-base/blob/master/config/osx-defaults.yml
-osx_defaults: {
+macos_defaults: {
   defaults: [
     { domain: "com.apple.ActivityMonitor", key: "IconType", type: "integer", value: "5" },
     { domain: "com.apple.ActivityMonitor", key: "OpenMainWindow", type: "boolean", value: "true" },
@@ -40,4 +39,4 @@ osx_defaults: {
 
     - hosts: all
       roles:
-        - { role: feffi.osx-defaults }
+        - { role: feffi.macos-defaults }

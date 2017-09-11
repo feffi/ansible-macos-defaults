@@ -1,5 +1,5 @@
 ---
-- name: Setup OSX defaults
+- name: Setup macOS defaults
   become: true
   osx_defaults:
     domain: "{{ item.domain }}"
@@ -8,4 +8,4 @@
     value: "{{ item.value }}"
     state: present
   when: item.enable | default(true)
-  with_items: "{{ osx_defaults.defaults }}"
+  with_items: "{{ macos_defaults.defaults }}"
