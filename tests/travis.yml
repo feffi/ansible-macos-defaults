@@ -2,14 +2,12 @@
 - hosts: 127.0.0.1
   connection: local
   vars:
-    DEBUG = true
-    osx_defaults: {
-      defaults: [
-        { domain: "com.apple.ActivityMonitor", key: "IconType", type: "integer", value: "5" },
-        { domain: "com.apple.ActivityMonitor", key: "OpenMainWindow", type: "boolean", value: "true" },
-        { domain: "com.apple.ActivityMonitor", key: "SortColumn", type: "string", value: "CPUUsage" },
-        { domain: "com.apple.dock", key: "expose-animation-duration", type: "float", value: "0.12" }
-      ]
-    }
+    DEBUG: true
+    osx_defaults:
+      defaults:
+        - { domain: "com.apple.ActivityMonitor", key: "IconType", type: "integer", value: "5" },
+        - { domain: "com.apple.ActivityMonitor", key: "OpenMainWindow", type: "boolean", value: "true" },
+        - { domain: "com.apple.ActivityMonitor", key: "SortColumn", type: "string", value: "CPUUsage" },
+        - { domain: "com.apple.dock", key: "expose-animation-duration", type: "float", value: "0.12" }
   roles:
     - ansible-osx-defaults
