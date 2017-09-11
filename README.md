@@ -16,7 +16,7 @@ hash_behaviour = merge
 
 ## Install
 Just add the role to your ``requirements.yml`` file:
-```
+```yaml
 - src: https://github.com/feffi/ansible-macos-defaults.git
   name: feffi.macos-defaults
 ```
@@ -37,6 +37,8 @@ macos_defaults: {
 
 ## Example Playbook
 
+```yaml
     - hosts: all
       roles:
         - { role: feffi.macos-defaults }
+```
