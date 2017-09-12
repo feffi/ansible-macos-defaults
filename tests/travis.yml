@@ -5,7 +5,7 @@
     DEBUG: true
     macos_defaults:
       defaults:
-        - { domain: "/Library/Preferences/com.apple.loginwindow", key: "AdminHostInfo", type: "string", value: "HostName" }
+        - { domain: "com.apple.ActivityMonitor", key: "SortColumn", type: "string", value: "CPUUsage" }
         - { domain: "com.apple.ActivityMonitor", key: "IconType", type: "integer", value: "5" }
         - { domain: "com.apple.ActivityMonitor", key: "OpenMainWindow", type: "boolean", value: "true" }
         - { domain: "com.apple.dock", key: "expose-animation-duration", type: "float", value: "0.12" }
