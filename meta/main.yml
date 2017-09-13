@@ -8,6 +8,9 @@ galaxy_info:
   - name: Darwin
     versions:
     - all
-  categories:
-  - system
+  galaxy_tags:
+    - system
+    - osx
+    - defaults
+    - config
 dependencies: []
