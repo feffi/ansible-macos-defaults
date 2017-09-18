@@ -9,3 +9,5 @@
     state: present
   when: item.enable | default(true)
   with_items: "{{ macos_defaults.defaults }}"
+  loop_control:
+      label: "{{ item.description }} = {{ item.value }}"
