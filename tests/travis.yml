@@ -5,6 +5,8 @@
     DEBUG: true
     macos_defaults:
       defaults:
+        - { domain: "com.apple.Safari", key: "NewWindowBehavior", type: "integer", value: "1", description: "New windows open with: Empty Page" }
+        - { domain: "com.apple.Safari", key: "OpenNewTabsInFront", type: "boolean", value: "false", description: "Don't make new tabs active" }
         - { domain: "com.apple.ActivityMonitor", key: "SortColumn", type: "string", value: "CPUUsage" }
         - { domain: "com.apple.ActivityMonitor", key: "IconType", type: "integer", value: "5" }
         - { domain: "com.apple.ActivityMonitor", key: "OpenMainWindow", type: "boolean", value: "true" }
