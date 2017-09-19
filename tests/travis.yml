@@ -14,4 +14,4 @@
         - { domain: "NSGlobalDomain", key: "AppleLanguages", type: "array", value: [ "de", "en" ] }
         - { domain: "NSGlobalDomain", key: "AppleLanguages", type: "array", value: [ "nl" ], add: true }
   roles:
-    - ansible-macos-defaults
+    - { role: ansible-macos-defaults }
