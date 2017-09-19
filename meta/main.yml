@@ -11,6 +11,8 @@ galaxy_info:
   galaxy_tags:
     - system
     - osx
+    - macos
     - defaults
+    - settings
     - config
 dependencies: []
