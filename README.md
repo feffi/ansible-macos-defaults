@@ -30,9 +30,9 @@ macos_defaults: {
     { domain: "com.apple.ActivityMonitor", key: "IconType", type: "integer", value: "5" },
     { domain: "com.apple.ActivityMonitor", key: "OpenMainWindow", type: "boolean", value: "true" },
     { domain: "com.apple.ActivityMonitor", key: "SortColumn", type: "string", value: "CPUUsage" },
-    { domain: "com.apple.dock", key: "expose-animation-duration", type: "float", value: "0.12" },
-    { domain: "NSGlobalDomain", key: "AppleLanguages", type: "array", value: [ "de", "en" ] },
-    { domain: "NSGlobalDomain", key: "AppleLanguages", type: "array", value: [ "nl" ], add: true }
+    { domain: "com.apple.dock", key: "expose-animation-duration", type: "float", value: "0.12", global: true },
+    { domain: "NSGlobalDomain", key: "AppleLanguages", type: "array", value: [ "de", "en" ], global: true },
+    { domain: "NSGlobalDomain", key: "AppleLanguages", type: "array", value: [ "nl" ], add: true, global: true }
   ]
 }
 ```
