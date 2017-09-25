@@ -5,13 +5,144 @@
     DEBUG: true
     macos_defaults:
       defaults:
+        - { domain: "com.apple.ActivityMonitor", key: "IconType", type: "integer", value: "5", description: "Visualize CPU usage in the Activity Monitor Dock icon" }
+        - { domain: "com.apple.ActivityMonitor", key: "OpenMainWindow", type: "boolean", value: "true", description: "Show the main window when launching Activity Monitor" }
+        - { domain: "com.apple.ActivityMonitor", key: "ShowCategory", type: "integer", value: "0", description: "Show all processes in Activity Monitor" }
+        - { domain: "com.apple.ActivityMonitor", key: "SortColumn", type: "string", value: "CPUUsage", description: "Sort Activity Monitor results by CPU usage" }
+        - { domain: "com.apple.ActivityMonitor", key: "SortDirection", type: "integer", value: "0", description: "Set the ActivityMonitor sort order" }
+        - { domain: "com.apple.ActivityMonitor", key: "UpdatePeriod", type: "integer", value: "2", description: "Update frequency of stats in ActivityMonitor" }
+        - { domain: "com.apple.ActivityMonitor", key: "DiskGraphType", type: "integer", value: "1", description: "Show Data in the Disk graph (instead of IO)" }
+        - { domain: "com.apple.ActivityMonitor", key: "NetworkGraphType", type: "integer", value: "1", description: "Show Data in the Network graph (instead of packets)" }
+        - { domain: "com.apple.AddressBook", key: "ABDefaultAddressCountryCode", type: "string", value: "de", description: "Set address format" }
+        - { domain: "com.apple.AddressBook", key: "ABNameDisplay", type: "integer", value: "1", description: "Display format 'Last, First'" }
+        - { domain: "com.apple.AddressBook", key: "ABNameSortingFormat", type: "string", value: "sortingLastName sortingFirstName", description: "Sort by last name" }
+        - { domain: "com.apple.addressbook", key: "ABShowDebugMenu", type: "boolean", value: "true", description: "Show debug menu in Addressbook" }
+        - { domain: "com.apple.archiveutility", key: "dearchive-move-after", type: "string", value: "~/.Trash", description: "Move archives to trash after extraction" }
+        - { domain: "com.apple.archiveutility", key: "dearchive-reveal-after", type: "boolean", value: "false", description: "Don't reveal extracted items" }
+        - { domain: "com.apple.BluetoothAudioAgent", key: "Apple Bitpool Min (editable)", type: "integer", value: "40", description: "Increase sound quality for Bluetooth headphones/headset" }
+        - { domain: "com.apple.CrashReporter", key: "DialogType", type: "string", value: "none", description: "Disable the crash reporter" }
+        - { domain: "com.apple.DiskUtility", key: "advanced-image-options", type: "boolean", value: "true", description: "Enable advanced image availability in Disk Utility" }
+        - { domain: "com.apple.DiskUtility", key: "DUDebugMenuEnabled", type: "boolean", value: "true", description: "Enable the debug menu in Disk Utility" }
+        - { domain: "com.apple.driver.AppleBluetoothMultitouch.trackpad", key: "Clicking", type: "boolean", value: "false", description: "Disable tap to click" }
+        - { domain: "com.apple.driver.AppleBluetoothMultitouch.trackpad", key: "TrackpadCornerSecondaryClick", type: "integer", value: "2", description: "Trackpad: map bottom right corner to right-click" }
+        - { domain: "com.apple.driver.AppleBluetoothMultitouch.trackpad", key: "TrackpadRightClick", type: "boolean", value: "true", description: "Trackpad: map bottom right corner to right-click" }
+        - { domain: "com.apple.dt.Xcode", key: "AlwaysShowTabBar", type: "boolean", value: "true", description: "Show tab bar" }
+        - { domain: "com.apple.dt.Xcode", key: "DVTTextIndentUsingTabs", type: "boolean", value: "false", description: "Always use spaces for indenting" }
+        - { domain: "com.apple.frameworks.diskimages", key: "skip-verify", type: "boolean", value: "true", description: "Don't verify disk images" }
+        - { domain: "com.apple.frameworks.diskimages", key: "skip-verify-locked", type: "boolean", value: "true", description: "Don't verify locked disk images" }
+        - { domain: "com.apple.frameworks.diskimages", key: "skip-verify-remote", type: "boolean", value: "true", description: "Don't verify remote disk images" }
+        - { domain: "com.apple.iCal", key: "first day of week", type: "integer", value: "1", description: "Set the first day of the week to Monday" }
+        - { domain: "com.apple.iCal", key: "n days of week", type: "integer", value: "7", description: "Set the days in a week" }
+        - { domain: "com.apple.iCal", key: "Show time in Month View", type: "boolean", value: "true", description: "Show event times" }
+        - { domain: "com.apple.iCal", key: "Show Week Numbers", type: "boolean", value: "true", description: "Show Week Numbers" }
+        - { domain: "com.apple.iCal", key: "IncludeDebugMenu", type: "boolean", value: "true", description: "Show debug menu in iCal" }
+        - { domain: "com.apple.LaunchServices", key: "LSQuarantine", type: "boolean", value: "false", description: "Don't show a warning when opening files downloaded from the Internet" }
+        - { domain: "com.apple.mail", key: "AddressesIncludeNameOnPasteboard", type: "boolean", value: "false", description: "Copy email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Mail.app" }
+        - { domain: "com.apple.mail", key: "DisableInlineAttachmentViewing", type: "boolean", value: "true", description: "Disable inline attachments (just show the icons)" }
+        - { domain: "com.apple.mail", key: "DisableReplyAnimations", type: "boolean", value: "true", description: "Disable reply animations in Mail.app" }
+        - { domain: "com.apple.mail", key: "DisableSendAnimations", type: "boolean", value: "true", description: "Disable send animations in Mail.app" }
+        - { domain: "com.apple.mail", key: "SpellCheckingBehavior", type: "string", value: "NoSpellCheckingEnabled", description: "Disable automatic spell checking" }
+        - { domain: "com.apple.Safari", key: "AutoFillPasswords", type: "boolean", value: "false", description: "Don't remember passwords" }
+        - { domain: "com.apple.Safari", key: "AutoOpenSafeDownloads", type: "boolean", value: "false", description: "Prevent Safari from opening ‘safe’ files automatically after downloading" }
+        - { domain: "com.apple.Safari", key: "com.apple.Safari.ContentPageGroupIdentifier.WebKit2BackspaceKeyNavigationEnabled", type: "boolean", value: "true", description: "Allow hitting the Backspace key to go to the previous page in history" }
+        - { domain: "com.apple.Safari", key: "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled", type: "boolean", value: "true", description: "Enable the Develop menu and the Web Inspector in Safari" }
+        - { domain: "com.apple.Safari", key: "com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaEnabled", type: "boolean", value: "false", description: "Disable Java" }
+        - { domain: "com.apple.Safari", key: "com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaScriptCanOpenWindowsAutomatically", type: "boolean", value: "false", description: "Block pop-up windows" }
+        - { domain: "com.apple.Safari", key: "com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaScriptEnabled", type: "boolean", value: "true", description: "Enable JavaScript" }
+        - { domain: "com.apple.Safari", key: "com.apple.Safari.ContentPageGroupIdentifier.WebKit2PluginsEnabled", type: "boolean", value: "true", description: "Enable plug-ins" }
+        - { domain: "com.apple.Safari", key: "com.apple.Safari.ContentPageGroupIdentifier.WebKit2TabsToLinks", type: "boolean", value: "true", description: "Press Tab to highlight each item on a web page" }
+        - { domain: "com.apple.Safari", key: "com.apple.Safari.ReadingListFetcher.WebKit2JavaScriptEnabled", type: "boolean", value: "false", description: "Reading list" }
+        - { domain: "com.apple.Safari", key: "com.apple.Safari.ReadingListFetcher.WebKit2LoadsImagesAutomatically", type: "boolean", value: "false", description: "Reading list" }
+        - { domain: "com.apple.Safari", key: "com.apple.Safari.ReadingListFetcher.WebKit2LoadsSiteIconsIgnoringImageLoadingPreference", type: "boolean", value: "true", description: "Reading list" }
+        - { domain: "com.apple.Safari", key: "com.apple.Safari.ReadingListFetcher.WebKit2PluginsEnabled", type: "boolean", value: "false", description: "Reading list" }
+        - { domain: "com.apple.Safari", key: "CommandClickMakesTabs", type: "boolean", value: "true", description: "Command-clicking a link creates tabs" }
+        - { domain: "com.apple.Safari", key: "DebugSnapshotsUpdatePolicy", type: "integer", value: "2", description: "Disable Safari’s thumbnail cache for History and Top Sites" }
+        - { domain: "com.apple.Safari", key: "FindOnPageMatchesWordStartsOnly", type: "boolean", false: "true", description: "Make Safari’s search banners default to Contains instead of Starts With" }
+        - { domain: "com.apple.Safari", key: "HomePage", type: "string", value: "about:blank", description: "Set Safari’s home page to `about:blank` for faster loading" }
+        - { domain: "com.apple.Safari", key: "IncludeDevelopMenu", type: "boolean", value: "true", description: "Enable the Develop menu and the Web Inspector in Safari" }
+        - { domain: "com.apple.Safari", key: "IncludeInternalDebugMenu", type: "boolean", value: "true", description: "Enable Safari’s debug menu" }
+        - { domain: "com.apple.Safari", key: "InstallExtensionUpdatesAutomatically", type: "boolean", value: "true", description: "Update extensions automatically" }
+        - { domain: "com.apple.Safari", key: "NewTabBehavior", type: "integer", value: "1", description: "New tabs open with: Empty Page" }
         - { domain: "com.apple.Safari", key: "NewWindowBehavior", type: "integer", value: "1", description: "New windows open with: Empty Page" }
         - { domain: "com.apple.Safari", key: "OpenNewTabsInFront", type: "boolean", value: "false", description: "Don't make new tabs active" }
-        - { domain: "com.apple.ActivityMonitor", key: "SortColumn", type: "string", value: "CPUUsage" }
-        - { domain: "com.apple.ActivityMonitor", key: "IconType", type: "integer", value: "5" }
-        - { domain: "com.apple.ActivityMonitor", key: "OpenMainWindow", type: "boolean", value: "true" }
-        - { domain: "com.apple.dock", key: "expose-animation-duration", type: "float", value: "0.12" }
-        - { domain: "NSGlobalDomain", key: "AppleLanguages", type: "array", value: [ "de", "en" ] }
-        - { domain: "NSGlobalDomain", key: "AppleLanguages", type: "array", value: [ "nl" ], add: true }
+        - { domain: "com.apple.Safari", key: "ProxiesInBookmarksBar", type: "string", value: "()", description: "Remove useless icons from Safari’s bookmarks bar" }
+        - { domain: "com.apple.Safari", key: "SendDoNotTrackHTTPHeader", type: "boolean", value: "true", description: "Do not track" }
+        - { domain: "com.apple.Safari", key: "ShowFavoritesBar", type: "boolean", value: "true", description: "Hide Safari’s bookmarks bar by default" }
+        - { domain: "com.apple.Safari", key: "ShowFullURLInSmartSearchField", type: "boolean", value: "true", description: "Show the full URL in the address bar (note: this still hides the scheme)" }
+        - { domain: "com.apple.Safari", key: "ShowSidebarInTopSites", type: "boolean", value: "false", description: "Hide Safari’s sidebar in Top Sites" }
+        - { domain: "com.apple.Safari", key: "ShowStatusBar", type: "boolean", value: "true", description: "Safari: show status bar" }
+        - { domain: "com.apple.Safari", key: "SuppressSearchSuggestions", type: "boolean", value: "true", description: "Privacy: don’t send search queries to Apple" }
+        - { domain: "com.apple.Safari", key: "TabCreationPolicy", type: "boolean", value: "1", description: "Open pages in tabs instead of windows: automatically" }
+        - { domain: "com.apple.Safari", key: "UniversalSearchEnabled", type: "boolean", value: "false", description: "Privacy: don’t send search queries to Apple" }
+        - { domain: "com.apple.Safari", key: "WarnAboutFraudulentWebsites", type: "boolean", value: "true", description: "Warn About Fraudulent Websites" }
+        - { domain: "com.apple.Safari", key: "WebKitDeveloperExtrasEnabledPreferenceKey", type: "boolean", value: "true", description: "Enable the Develop menu in Safari" }
+        - { domain: "com.apple.Safari", key: "WebKitJavaEnabled", type: "boolean", value: "false", description: "Enable Java" }
+        - { domain: "com.apple.Safari", key: "WebKitJavaScriptCanOpenWindowsAutomatically", type: "boolean", value: "false", description: "Block pop-up windows" }
+        - { domain: "com.apple.Safari", key: "WebKitJavaScriptEnabled", type: "boolean", value: "true", description: "Enable JavaScript" }
+        - { domain: "com.apple.Safari", key: "WebKitPluginsEnabled", type: "boolean", value: "true", description: "Enable plug-ins" }
+        - { domain: "com.apple.Safari", key: "WebKitTabToLinksPreferenceKey", type: "boolean", value: "true", description: "Press Tab to highlight each item on a web page" }
+        - { domain: "com.apple.terminal", key: "Default Window Settings", type: "string", value: "Pro", description: "Set the 'Basic Improved' as the default" }
+        - { domain: "com.apple.terminal", key: "Startup Window Settings", type: "string", value: "Pro", description: "Set the 'Basic Improved' as the default" }
+        - { domain: "com.apple.TextEdit", key: "PlainTextEncoding", type: "integer", value: "4", description: "Open and save files as UTF-8 in TextEdit" }
+        - { domain: "com.apple.TextEdit", key: "PlainTextEncodingForWrite", type: "integer", value: "4", description: "Open and save files as UTF-8 in TextEdit" }
+        - { domain: "com.apple.TextEdit", key: "RichText", type: "integer", value: "0", description: "Use plain text mode for new TextEdit documents" }
+        - { domain: "com.google.Chrome", key: "AppleEnableSwipeNavigateWithScrolls", type: "boolean", value: "false", description: "Disable the all too sensitive backswipe on trackpads" }
+        - { domain: "com.google.Chrome", key: "AppleEnableSwipeNavigateWithScrolls", type: "boolean", value: "false", description: "Disable the all too sensitive backswipe on trackpads in google-chrome" }
+        - { domain: "com.google.Chrome", key: "DisablePrintPreview", type: "boolean", value: "true", description: "Use the system-native print preview dialog in google-chrome" }
+        - { domain: "com.google.Chrome.canary", key: "AppleEnableSwipeNavigateWithScrolls", type: "boolean", value: "false", description: "Disable the all too sensitive backswipe on trackpads in google-chrome-carnary" }
+        - { domain: "com.google.Chrome.canary", key: "DisablePrintPreview", type: "boolean", value: "true", description: "Use the system-native print preview dialog in google-chrome-carnary" }
+        - { domain: "com.googlecode.iterm2", key: "PromptOnQuit", type: "boolean", value: "false", description: "Don’t display the annoying prompt when quitting iTerm" }
+        - { domain: "NSGlobalDomain", key: "ApplePressAndHoldEnabled", type: "boolean", value: "false", description: "Enable key repeat" }
+        - { domain: "NSGlobalDomain", key: "KeyRepeat", type: "integer", value: "1", description: "Set keyboard repeat rate" }
+        - { domain: "NSGlobalDomain", key: "com.apple.mouse.tapBehavior", type: "integer", value: "1", description: "Trackpad: enable tap to click for this user and for the login screen" }
+        - { domain: "NSGlobalDomain", key: "com.apple.trackpad.enableSecondaryClick", type: "boolean", value: "true", description: "Trackpad: map bottom right corner to right-click" }
+        - { domain: "NSGlobalDomain", key: "com.apple.trackpad.trackpadCornerClickBehavior", type: "integer", value: "1", description: "Trackpad: map bottom right corner to right-click" }
+        - { domain: "NSGlobalDomain", key: "NSAutomaticDashSubstitutionEnabled", type: "boolean", value: "false", description: "Disable smart dashes" }
+        - { domain: "NSGlobalDomain", key: "NSAutomaticQuoteSubstitutionEnabled", type: "boolean", value: "false", description: "Disable smart quotes" }
+        - { domain: "NSGlobalDomain", key: "NSAutomaticSpellingCorrectionEnabled", type: "boolean", value: "false", description: "Disable correct spelling automatically" }
+        - { domain: "NSGlobalDomain", key: "NSNavPanelExpandedStateForSaveMode", type: "boolean", value: "true", description: "Expand Save Panel by Default (System)" }
+        - { domain: "NSGlobalDomain", key: "NSNavPanelExpandedStateForSaveMode2", type: "boolean", value: "true", description: "Expand Save Panel by Default (App)" }
+        - { domain: "NSGlobalDomain", key: "NSQuitAlwaysKeepsWindows", type: "boolean", value: "false", description: "Don't restore windows when quitting or re-opening apps" }
+        - { domain: "NSGlobalDomain", key: "NSTextShowsControlCharacters", type: "boolean", value: "true", description: "Display ASCII control characters in caret notation" }
+        - { domain: "NSGlobalDomain", key: "NSWindowResizeTime", type: "float", value: "0.001", description: "Showing and hiding sheets, resizing preference windows, zooming windows" }
+        - { domain: "NSGlobalDomain", key: "PMPrintingExpandedStateForPrint", type: "boolean", value: "true", description: "Expand Print Panel by Default (System)" }
+        - { domain: "NSGlobalDomain", key: "PMPrintingExpandedStateForPrint2", type: "boolean", value: "true", description: "Expand Print Panel by Default (App)" }
+        - { domain: "NSGlobalDomain", key: "WebKitDeveloperExtras", type: "boolean", value: "true", description: "Add a context menu item for showing the web inspector to web views" }
+        - { domain: "com.apple.systemuiserver", key: "menuExtras", type: "array", value: [ "/System/Library/CoreServices/Menu Extras/Bluetooth.menu", "/System/Library/CoreServices/Menu Extras/AirPort.menu", "/System/Library/CoreServices/Menu Extras/Battery.menu", "/System/Library/CoreServices/Menu Extras/Clock.menu" ], description: "Menu bar: hide the useless Time Machine and Volume icons" }
+        - { domain: "/.Spotlight-V100/VolumeConfiguration", key: "Exclusions", type: "array", value: [ "/Volumes" ], description: "Disable Spotlight indexing for any volume that gets mounted and has not yet been indexed before." }
+        - { domain: "com.apple.spotlight", key: "orderedItems", type: "array", value: [ '{"enabled" = 1;"name" = "APPLICATIONS";}', '{"enabled" = 1;"name" = "SYSTEM_PREFS";}', '{"enabled" = 1;"name" = "DIRECTORIES";}', '{"enabled" = 1;"name" = "MOVIES";}', '{"enabled" = 0;"name" = "PDF";}', '{"enabled" = 0;"name" = "FONTS";}', '{"enabled" = 0;"name" = "DOCUMENTS";}', '{"enabled" = 0;"name" = "MESSAGES";}', '{"enabled" = 0;"name" = "CONTACT";}', '{"enabled" = 0;"name" = "EVENT_TODO";}', '{"enabled" = 0;"name" = "IMAGES";}', '{"enabled" = 0;"name" = "BOOKMARKS";}', '{"enabled" = 0;"name" = "MUSIC";}', '{"enabled" = 0;"name" = "PRESENTATIONS";}', '{"enabled" = 0;"name" = "SPREADSHEETS";}', '{"enabled" = 0;"name" = "SOURCE";}' ], description: "Change indexing order and disable some file types" }
+        - { domain: "om.google.Chrome", key: "ExtensionInstallSources", type: "array", value: [ "https://gist.githubusercontent.com/", "http://userscripts.org/*" ], description: "Allow installing user scripts via GitHub Gist or Userscripts.org in google-chrome" }
+        - { domain: "om.google.Chrome.canary", key: "ExtensionInstallSources", type: "array", value: [ "https://gist.githubusercontent.com/", "http://userscripts.org/*" ], description: "Allow installing user scripts via GitHub Gist or Userscripts.org in google-chrome-carnary" }
+        - { domain: "com.vmware.fusion", key: "showStartMenu3", type: "integer", value: "0", description: "VMware Fusion: Applications menu: Show in Menu Bar: Never" }
+        - { domain: "com.apple.terminal", key: "StringEncodings", type: "array", value: [ "4" ], description: "Only use UTF-8 in Terminal.app" }
+        - { domain: "NSGlobalDomain", key: "InitialKeyRepeat", type: "integer", value: "10", description: "Set initial keyboard key repeat rate" }
+        - { domain: "com.apple.menuextra.battery", key: "ShowPercent", type: "string", value: "NO", description: "Show remaining battery time in percent" }
+        - { domain: "com.apple.menuextra.battery", key: "ShowTime", type: "string", value: "YES", description: "Show rmaining time in battery stats" }
+        - { domain: "com.apple.finder", key: "FXInfoPanesExpanded", type: "dict", value: { Privileges: true, MetaData: true, Comments: true, OpenWith: true, Preview: false, Name: true, General: true } description: "Expand the following File Info panes: 'General', 'Open with', and 'Sharing & Permissions'" }
+        - { domain: "com.apple.finder", key: "DesktopViewSettings:IconViewSettings:showItemInfo", type: "boolean", value: true, description: "Show item info near icons on the desktop" }
+        - { domain: "com.apple.finder", key: "FK_StandardViewSettings:IconViewSettings:showItemInfo", type: "boolean", value: true, description: "Show item info near icons in finder icon view" }
+        - { domain: "com.apple.finder", key: "StandardViewSettings:IconViewSettings:showItemInfo", type: "boolean", value: true, description: "Show item info near icons other icon views" },
+        - { domain: "com.apple.finder", key: "DesktopViewSettings:IconViewSettings:labelOnBottom", type: "boolean", value: true, description: "Icon label position: true = bottom, false = right" }
+        - { domain: "com.apple.finder", key: "DesktopViewSettings:IconViewSettings:arrangeBy", type: "boolean", value: "grid", description: "Enable snap-to-grid for icons on the desktop" }
+        - { domain: "com.apple.finder", key: "FK_StandardViewSettings:IconViewSettings:arrangeBy", type: "boolean", value: "grid", description: "Enable snap-to-grid for icons in finder icon views" }
+        - { domain: "com.apple.finder", key: "StandardViewSettings:IconViewSettings:arrangeBy", type: "boolean", value: "grid", description: "Enable snap-to-grid for icons in other icon views" }
+        - { domain: "com.apple.finder", key: "DesktopViewSettings:IconViewSettings:gridSpacing", type: "boolean", value: 100, description: "Increase grid spacing for icons on the desktop" }
+        - { domain: "com.apple.finder", key: "FK_StandardViewSettings:IconViewSettings:gridSpacing", type: "boolean", value: 100, description: "Increase grid spacing for icons in finder icon views" }
+        - { domain: "com.apple.finder", key: "StandardViewSettings:IconViewSettings:gridSpacing", type: "boolean", value: 100, description: "Increase grid spacing for icons in other icon views" }
+        - { domain: "com.apple.finder", key: "DesktopViewSettings:IconViewSettings:iconSize", type: "boolean", value: 80, description: "Increase the size of icons on the desktop" }
+        - { domain: "com.apple.finder", key: "FK_StandardViewSettings:IconViewSettings:iconSize", type: "boolean", value: 80, description: "Increase the size of icons in finder icon views" }
+        - { domain: "com.apple.finder", key: "StandardViewSettings:IconViewSettings:iconSize", type: "boolean", value: 80, description: "Increase the size of icons in other icon views" }
+        - { domain: "com.apple.mail", key: "NSUserKeyEquivalents", type: "string", value: "@\\U21a9", add: true, description: "Add the keyboard shortcut ⌘ + Enter to send an email in Mail.app" }
+        - { domain: "com.apple.mail", key: "DraftsViewerAttributes:DisplayInThreadedMode", type: "string", value: "yes", add: true, description: "Display emails in threaded mode" }
+        - { domain: "com.apple.mail", key: "DraftsViewerAttributes:SortedDescending", type: "string", value: "yes", add: true, description: "Display emails sorted by date" }
+        - { domain: "com.apple.mail", key: "DraftsViewerAttributes:SortOrder", type: "string", value: "received-date", add: true, description: "Display emails oldest at the top" }
+        - { domain: "com.apple.messageshelper.MessageController", key: "SOInputLineSettings:automaticEmojiSubstitutionEnablediMessage", type: "boolean", value: false, add: true, description: "Disable automatic emoji substitution (i.e. use plain text smileys) in Messages.app" }
+        - { domain: "com.apple.messageshelper.MessageController", key: "SOInputLineSettings:automaticQuoteSubstitutionEnabled", type: "boolean", value: false, add: true, description: "Disable smart quotes as it’s annoying for messages that contain code in Messages.app" }
+        - { domain: "com.apple.messageshelper.MessageController", key: "SOInputLineSettings:continuousSpellCheckingEnabled", type: "boolean", value: false, add: true, description: "Disable continuous spell checking in Messages.app" }
+        - { domain: "com.apple.digihub", key: "com.apple.digihub.blank.cd.appeared", type: "dict", value: { action: 1 } description: "Disable blank CD automatic action" }
+        - { domain: "com.apple.digihub", key: "com.apple.digihub.cd.music.appeared", type: "dict", value: { action: 1 } description: "Disable music CD automatic action" }
+        - { domain: "com.apple.digihub", key: "com.apple.digihub.cd.picture.appeared", type: "dict", value: { action: 1 } description: "Disable picture CD automatic action" }
+        - { domain: "com.apple.digihub", key: "com.apple.digihub.blank.dvd.appeared", type: "dict", value: { action: 1 } description: "Disable blank DVD automatic action" }
+        - { domain: "com.apple.digihub", key: "com.apple.digihub.dvd.video.appeared", type: "dict", value: { action: 1 } description: "Disable video DVD automatic action" }
   roles:
     - { role: ansible-macos-defaults }

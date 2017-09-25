@@ -1,6 +1,6 @@
 ---
 - name: Setup macOS defaults
-  osx_defaults:
+  osx_defaults_new:
     array_add: "{{ item.add | default(false) }}"
     domain: "{{ item.domain }}"
     key: "{{ item.key }}"
