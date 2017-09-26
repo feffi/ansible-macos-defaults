@@ -126,12 +126,12 @@
         - { domain: "com.apple.finder", key: "DesktopViewSettings:IconViewSettings:arrangeBy", type: "string", value: "grid", description: "Enable snap-to-grid for icons on the desktop" }
         - { domain: "com.apple.finder", key: "FK_StandardViewSettings:IconViewSettings:arrangeBy", type: "string", value: "grid", description: "Enable snap-to-grid for icons in finder icon views" }
         - { domain: "com.apple.finder", key: "StandardViewSettings:IconViewSettings:arrangeBy", type: "string", value: "grid", description: "Enable snap-to-grid for icons in other icon views" }
-        - { domain: "com.apple.finder", key: "DesktopViewSettings:IconViewSettings:gridSpacing", type: "integer", value: 100, description: "Increase grid spacing for icons on the desktop" }
-        - { domain: "com.apple.finder", key: "FK_StandardViewSettings:IconViewSettings:gridSpacing", type: "integer", value: 100, description: "Increase grid spacing for icons in finder icon views" }
-        - { domain: "com.apple.finder", key: "StandardViewSettings:IconViewSettings:gridSpacing", type: "integer", value: 100, description: "Increase grid spacing for icons in other icon views" }
-        - { domain: "com.apple.finder", key: "DesktopViewSettings:IconViewSettings:iconSize", type: "integer", value: 80, description: "Increase the size of icons on the desktop" }
-        - { domain: "com.apple.finder", key: "FK_StandardViewSettings:IconViewSettings:iconSize", type: "integer", value: 80, description: "Increase the size of icons in finder icon views" }
-        - { domain: "com.apple.finder", key: "StandardViewSettings:IconViewSettings:iconSize", type: "integer", value: 80, description: "Increase the size of icons in other icon views" }
+        - { domain: "com.apple.finder", key: "DesktopViewSettings:IconViewSettings:gridSpacing", type: "float", value: 100, description: "Increase grid spacing for icons on the desktop" }
+        - { domain: "com.apple.finder", key: "FK_StandardViewSettings:IconViewSettings:gridSpacing", type: "float", value: 100, description: "Increase grid spacing for icons in finder icon views" }
+        - { domain: "com.apple.finder", key: "StandardViewSettings:IconViewSettings:gridSpacing", type: "float", value: 100, description: "Increase grid spacing for icons in other icon views" }
+        - { domain: "com.apple.finder", key: "DesktopViewSettings:IconViewSettings:iconSize", type: "float", value: 80, description: "Increase the size of icons on the desktop" }
+        - { domain: "com.apple.finder", key: "FK_StandardViewSettings:IconViewSettings:iconSize", type: "float", value: 80, description: "Increase the size of icons in finder icon views" }
+        - { domain: "com.apple.finder", key: "StandardViewSettings:IconViewSettings:iconSize", type: "float", value: 80, description: "Increase the size of icons in other icon views" }
         - { domain: "com.apple.mail", key: "NSUserKeyEquivalents", type: "string", value: "@\\U21a9", add: true, description: "Add the keyboard shortcut ⌘ + Enter to send an email in Mail.app" }
         - { domain: "com.apple.mail", key: "DraftsViewerAttributes:DisplayInThreadedMode", type: "string", value: "yes", add: true, description: "Display emails in threaded mode" }
         - { domain: "com.apple.mail", key: "DraftsViewerAttributes:SortedDescending", type: "string", value: "yes", add: true, description: "Display emails sorted by date" }
