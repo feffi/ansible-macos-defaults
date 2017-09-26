@@ -121,7 +121,7 @@
         - { domain: "com.apple.finder", key: "FXInfoPanesExpanded", type: "dict", value: { Privileges: true, MetaData: true, Comments: true, OpenWith: true, Preview: false, Name: true, General: true } description: "Expand the following File Info panes: 'General', 'Open with', and 'Sharing & Permissions'" }
         - { domain: "com.apple.finder", key: "DesktopViewSettings:IconViewSettings:showItemInfo", type: "boolean", value: true, description: "Show item info near icons on the desktop" }
         - { domain: "com.apple.finder", key: "FK_StandardViewSettings:IconViewSettings:showItemInfo", type: "boolean", value: true, description: "Show item info near icons in finder icon view" }
-        - { domain: "com.apple.finder", key: "StandardViewSettings:IconViewSettings:showItemInfo", type: "boolean", value: true, description: "Show item info near icons other icon views" },
+        - { domain: "com.apple.finder", key: "StandardViewSettings:IconViewSettings:showItemInfo", type: "boolean", value: true, description: "Show item info near icons other icon views" }
         - { domain: "com.apple.finder", key: "DesktopViewSettings:IconViewSettings:labelOnBottom", type: "boolean", value: true, description: "Icon label position: true = bottom, false = right" }
         - { domain: "com.apple.finder", key: "DesktopViewSettings:IconViewSettings:arrangeBy", type: "boolean", value: "grid", description: "Enable snap-to-grid for icons on the desktop" }
         - { domain: "com.apple.finder", key: "FK_StandardViewSettings:IconViewSettings:arrangeBy", type: "boolean", value: "grid", description: "Enable snap-to-grid for icons in finder icon views" }
