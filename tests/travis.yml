@@ -118,7 +118,7 @@
         - { domain: "NSGlobalDomain", key: "InitialKeyRepeat", type: "integer", value: "10", description: "Set initial keyboard key repeat rate" }
         - { domain: "com.apple.menuextra.battery", key: "ShowPercent", type: "string", value: "NO", description: "Show remaining battery time in percent" }
         - { domain: "com.apple.menuextra.battery", key: "ShowTime", type: "string", value: "YES", description: "Show rmaining time in battery stats" }
-        - { domain: "com.apple.finder", key: "FXInfoPanesExpanded", type: "dict", value: { Privileges: true, MetaData: true, Comments: true, OpenWith: true, Preview: false, Name: true, General: true } description: "Expand the following File Info panes: 'General', 'Open with', and 'Sharing & Permissions'" }
+        - { domain: "com.apple.finder", key: "FXInfoPanesExpanded", type: "dict", value: { Privileges: true, MetaData: true, Comments: true, OpenWith: true, Preview: false, Name: true, General: true }, description: "Expand the following File Info panes: 'General', 'Open with', and 'Sharing & Permissions'" }
         - { domain: "com.apple.finder", key: "DesktopViewSettings:IconViewSettings:showItemInfo", type: "boolean", value: true, description: "Show item info near icons on the desktop" }
         - { domain: "com.apple.finder", key: "FK_StandardViewSettings:IconViewSettings:showItemInfo", type: "boolean", value: true, description: "Show item info near icons in finder icon view" }
         - { domain: "com.apple.finder", key: "StandardViewSettings:IconViewSettings:showItemInfo", type: "boolean", value: true, description: "Show item info near icons other icon views" }
