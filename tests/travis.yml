@@ -139,10 +139,10 @@
         - { domain: "com.apple.messageshelper.MessageController", key: "SOInputLineSettings:automaticEmojiSubstitutionEnablediMessage", type: "boolean", value: false, add: true, description: "Disable automatic emoji substitution (i.e. use plain text smileys) in Messages.app" }
         - { domain: "com.apple.messageshelper.MessageController", key: "SOInputLineSettings:automaticQuoteSubstitutionEnabled", type: "boolean", value: false, add: true, description: "Disable smart quotes as it’s annoying for messages that contain code in Messages.app" }
         - { domain: "com.apple.messageshelper.MessageController", key: "SOInputLineSettings:continuousSpellCheckingEnabled", type: "boolean", value: false, add: true, description: "Disable continuous spell checking in Messages.app" }
-        - { domain: "com.apple.digihub", key: "com.apple.digihub.blank.cd.appeared", type: "dict", value: { action: 1 } description: "Disable blank CD automatic action" }
-        - { domain: "com.apple.digihub", key: "com.apple.digihub.cd.music.appeared", type: "dict", value: { action: 1 } description: "Disable music CD automatic action" }
-        - { domain: "com.apple.digihub", key: "com.apple.digihub.cd.picture.appeared", type: "dict", value: { action: 1 } description: "Disable picture CD automatic action" }
-        - { domain: "com.apple.digihub", key: "com.apple.digihub.blank.dvd.appeared", type: "dict", value: { action: 1 } description: "Disable blank DVD automatic action" }
-        - { domain: "com.apple.digihub", key: "com.apple.digihub.dvd.video.appeared", type: "dict", value: { action: 1 } description: "Disable video DVD automatic action" }
+        - { domain: "com.apple.digihub", key: "com.apple.digihub.blank.cd.appeared", type: "dict", value: { action: 1 }, description: "Disable blank CD automatic action" }
+        - { domain: "com.apple.digihub", key: "com.apple.digihub.cd.music.appeared", type: "dict", value: { action: 1 }, description: "Disable music CD automatic action" }
+        - { domain: "com.apple.digihub", key: "com.apple.digihub.cd.picture.appeared", type: "dict", value: { action: 1 }, description: "Disable picture CD automatic action" }
+        - { domain: "com.apple.digihub", key: "com.apple.digihub.blank.dvd.appeared", type: "dict", value: { action: 1 }, description: "Disable blank DVD automatic action" }
+        - { domain: "com.apple.digihub", key: "com.apple.digihub.dvd.video.appeared", type: "dict", value: { action: 1 }, description: "Disable video DVD automatic action" }
   roles:
     - { role: ansible-macos-defaults }
