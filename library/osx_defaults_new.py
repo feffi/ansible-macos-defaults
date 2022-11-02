@@ -1,4 +1,4 @@
-#/usr/bin/python
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
 
 # (c) 2014, GeekChimp - Franck Nijhof <franck@geekchimp.com>
@@ -160,8 +160,6 @@ import datetime
 import os
 import re
 import string
-#from types import NoneType
-NoneType = type(None)
 
 from ansible.module_utils.basic import AnsibleModule
 
@@ -599,7 +597,7 @@ class CFPreferences(object):
         elif isinstance(value, Data):
             value = value.binary
             value = CoreFoundation.CFDataCreate(None, value, len(value))
-        elif not isinstance(value, (NoneType, bool, int, float)):
+        elif not isinstance(value, (type(None), bool, int, float)):
             raise TypeError('{0} of value `{1}` is unsupported.'.format(
                 type(value), repr(value)
             ))
