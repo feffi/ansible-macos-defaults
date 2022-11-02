@@ -160,7 +160,6 @@ import datetime
 import os
 import re
 import string
-from types import NoneType
 
 from ansible.module_utils.basic import AnsibleModule
 
@@ -198,7 +197,7 @@ def string_to_datetime(value):
     (YYYY-MM-DDThh:mm:ss+00:00).
     Local timezone offset will be added to dates without timezone.
     """
-    if not isinstance(value, basestring):
+    if not isinstance(value, str):
         raise ValueError('Value need to be a string.')
 
     match = RE_DATETIME.match(value)
@@ -266,9 +265,9 @@ def equivalent_types(value1, value2):
     """
     supported_types = (
         bool,
-        (int, long),
+        int,
         float,
-        (unicode, str),
+        str,
         datetime.datetime,
         Data,
         list,
@@ -296,7 +295,7 @@ class Data(str):
             return data
 
         # Try to convert unicode to ascii string.
-        if isinstance(data, unicode):
+        if isinstance(data, str):
             try:
                 data = data.encode('ascii')
             except UnicodeEncodeError:
@@ -377,7 +376,7 @@ class CFPreferences(object):
     def domain(self, domain):
         # Be sure domain is a string/unicode. If not, that will trigger
         # a "Trace/BPT trap" crash.
-        if not isinstance(domain, basestring):
+        if not isinstance(domain, str):
             raise TypeError('Domain should be a string or unicode.')
         if domain == 'NSGlobalDomain':
             domain = Foundation.kCFPreferencesAnyApplication
@@ -598,15 +597,7 @@ class CFPreferences(object):
         elif isinstance(value, Data):
             value = value.binary
             value = CoreFoundation.CFDataCreate(None, value, len(value))
-        elif isinstance(value, str):
-            try:
-                value = unicode(value, 'utf-8')
-            except UnicodeDecodeError:
-                raise TypeError(
-                    'Invalid string {0} of value `{1}` is unsupported.'
-                    .format(type(value), repr(value))
-                )
-        elif not isinstance(value, (NoneType, bool, int, float, long, unicode)):
+        elif not isinstance(value, (type(None), bool, int, float)):
             raise TypeError('{0} of value `{1}` is unsupported.'.format(
                 type(value), repr(value)
             ))
@@ -648,7 +639,7 @@ class CFPreferences(object):
 
     def _split_keys_n_idxs(self, key_string):
         """ Split key string in a list of keys and indexes (as int). """
-        if not isinstance(key_string, basestring):
+        if not isinstance(key_string, str):
             raise TypeError('Key should be a string. {0} {1}'.format(repr(key_string), type(key_string)))
 
         keys_n_idxs = [
@@ -658,7 +649,7 @@ class CFPreferences(object):
 
         # Be sure first key is a string. If not, that can trigger
         # a "Trace/BPT trap" crash.
-        if not isinstance(keys_n_idxs[0], basestring):
+        if not isinstance(keys_n_idxs[0], str):
             raise TypeError('First key should be a string.')
 
         return keys_n_idxs
@@ -756,7 +747,7 @@ class OSXDefaults(object):
         It's possible to keep all those cases as string by specifying their
         type: `type: string`.
         """
-        if isinstance(value, basestring):
+        if isinstance(value, str):
             if first_level:
                 if '.' in value:
                     try:
@@ -781,11 +772,6 @@ class OSXDefaults(object):
                 return Data(value)
             except ValueError:
                 pass
-            if isinstance(value, str):
-                try:
-                    return value.decode('utf-8')
-                except UnicodeDecodeError:
-                    raise OSXDefaultsException('String is not valid UTF-8.')
         elif isinstance(value, list):
             return [self._auto_cast_type(item, False) for item in value]
         elif isinstance(value, dict):
@@ -809,17 +795,17 @@ class OSXDefaults(object):
             'real': float,
             'int': int,
             'integer': int,
-            'string': unicode,
-            'str': unicode,
+            'string': str,
+            'str': str,
         }
 
         possible_casting = {
-            bool: (int, unicode),
-            int: (bool, float, unicode),
-            float: (bool, int, unicode),
-            unicode: (bool, int, float),
-            Data: (unicode,),
-            datetime.datetime: (unicode,),
+            bool: (int, str),
+            int: (bool, float, str),
+            float: (bool, int, str),
+            str: (bool, int, float),
+            Data: (str,),
+            datetime.datetime: (str,),
         }
 
         try:
@@ -828,11 +814,6 @@ class OSXDefaults(object):
             raise OSXDefaultsException(
                 'Unsupported type specified: <{0}>'.format(given_type)
             )
-        if isinstance(value, str):
-            try:
-                value = value.decode('utf-8')
-            except UnicodeDecodeError:
-                raise OSXDefaultsException('String is not valid UTF-8.')
 
         if isinstance(value, given_type):
             if given_type in (list, dict):
@@ -842,9 +823,9 @@ class OSXDefaults(object):
         if (value is not None and
                 isinstance(value, possible_casting.get(given_type, given_type))):
             if given_type == bool:
-                if unicode(value).lower() in ('1', 'on', 'true', 'yes'):
+                if value.lower() in ('1', 'on', 'true', 'yes'):
                     return True
-                if unicode(value).lower() in ('0', 'off', 'false', 'no'):
+                if value.lower() in ('0', 'off', 'false', 'no'):
                     return False
             elif given_type == datetime.datetime:
                 try:
