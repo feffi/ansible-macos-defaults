@@ -1,14 +1,13 @@
 ---
 - name: Setup macOS defaults
   become: "{{ item.global | default(false) }}"
-  osx_defaults_new:
+  community.general.osx_defaults:
     array_add: "{{ item.add | default(false) }}"
     domain: "{{ item.domain }}"
     key: "{{ item.key }}"
     type: "{{ item.type }}"
     value: "{{ item.value }}"
     state: present
-    any_user: "{{ item.global | default(false) }}"
   when: item.enable | default(true)
   with_items: "{{ macos_defaults.defaults }}"
   loop_control:
